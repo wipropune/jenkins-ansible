@@ -4,7 +4,7 @@
   hosts: webservers
   tasks: 
     - 
-      apt: 
+      yum: 
         name: httpd
         state: present
       name: "Install packages"
