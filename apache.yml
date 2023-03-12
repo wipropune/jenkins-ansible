@@ -4,15 +4,15 @@
   hosts: webservers
   tasks: 
     - 
-      apt: 
-        name: apache2
+      yum: 
+        name: httpd
         state: present
       name: "Install packages"
     - 
       name: "Start Apache server"
       service: 
         enabled: true
-        name: apache2
+        name: httpd
         state: started
     - 
       copy: 
